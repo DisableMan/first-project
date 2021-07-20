@@ -1,0 +1,283 @@
+/* setup basic css */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    /* 1rem = 10px */
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    line-height: 1;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+/* Luu y khai bai font chu cho cac cai nay vi no k ke thua */
+input, textarea, button {
+    outline: none;
+    box-shadow: none;
+    font-family: 'Lato', sans-serif;
+}
+
+/* khai bao cac bien dung chung */
+:root {
+    --primary: #64c29e;
+    --heading: #353738;
+    --text:#848789;
+    --bgLight: #f7f7f7;
+    --bgWhite: #ffffff;
+    --bgDark: #282f35;
+    --bginputBorder: #d3d7d9;
+    --bginputText: #c8c8c8;
+}
+
+/* Wrapper */
+
+.wrapper {
+    max-width: 160rem;
+    margin: 0 auto;
+}
+
+.header { 
+    min-height: 80rem; 
+    /* Dua vao hinh anh */
+    background-image: url(../images/YEBO_Bicycle_Theme.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    /* tac dong vao the nav */
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.nav {
+    margin-top: 3.5rem;
+}
+
+.nav__list {
+    display: flex;
+    align-items: center;
+}
+
+.nav__item {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    position: relative;
+}
+
+/* Tao css . cho menu */
+.nav__item:first-child::after, .nav__item:nth-child(4)::after {
+    content : ".";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 2rem;
+    color: var(--heading);
+}
+
+.nav__link {
+    position: relative;
+    display: block;
+    text-transform: uppercase;
+    color: var(--heading);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+/**************************************** Feature  *****************************************/
+.feature__header {
+    background-color: var(--bgLight);
+    padding:11.5rem 1.5rem 14rem ;
+    text-align: center;
+}
+
+.feature__img--top {
+    margin: 0 auto 3.2rem;
+}
+
+.feature__heading {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--heading);
+    line-height: 1.6;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 3.5rem;
+    letter-spacing: 0.6rem;
+}
+
+.feature__header--desc {
+    font-size: 1.8rem;
+    line-height: 3.2rem;
+    color: var(--text);
+    margin: 0 auto;
+    max-width: 108rem;
+}
+
+.feature__item {
+    display: flex;
+    flex-flow: row wrap;
+    height: 60rem;
+    overflow: hidden;
+}
+/* Cot ben trai */
+.feature__item--img {
+    width: 66.666666666666666666%;
+    position: relative;
+}
+
+.feature__item--content {
+    width: 33.333333333333333333%; 
+}
+
+.feature__item--img .img__bg {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.feature__item--img .img__brand {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    /* cho chac chan la brand nay se nam ben tren cai anh bg */
+    /* z-index: chi phoi thu tu xem chong len nhau */
+}
+/* Cot ben phai */
+.feature__item--content {
+    
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.feature__item--content-top {
+    /* border: 1px brown solid; */
+    padding: 0 6.5rem;
+    position: relative;
+    background-color: var(--bgWhite);
+    height: 66.666666666666666666%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.feature__item--text {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: var(--text);
+    text-align: justify;
+    position: relative;
+    padding-bottom: 3.8rem;
+    /* border: 1px brown solid; */
+}
+
+.feature__item--content-bottom {
+    height: 33.333333333333333333%;
+}
+
+/* Doi thu tu cua thanh phan trong item thu 2 */
+
+.feature__item:nth-child(2) .feature__item--img {
+    order: 2;
+}
+
+/* Css li thu 3 */
+.feature__item:last-child > .feature__item--img {
+    width: 33.333333333333333333%;
+}
+/* Cot nam giua */
+.feature__item:last-child > .feature__item--content {
+    width: 33.333333333333333333%;
+}
+
+/* Css dau gach ngang ben duoi the p */
+.feature__item--text::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5.5rem;
+    height: 2px;
+    background-color: #d7d7d7;
+}
+
+/* Css Arrow */
+
+.feature__item--content-top::after {
+    content:"";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--bgWhite);
+    z-index: 10;
+    transform: translate(-50%, 50%) rotate(-45deg);
+
+}
+
+/**************************************** tweet  *****************************************/
+
+.tweet {
+    padding: 12.5rem 1.5rem 7rem;
+    background-color: var(--bgLight);
+    text-align: center;
+}
+
+.tweet__icon {
+    font-size: 3.6rem;
+    color: #56c7ee;
+    margin-bottom: 3.5rem;
+}
+
+.tweet__heading {
+    font-size: 1.8rem;
+    margin-bottom: 2.5rem;
+}
+
+.tweet__location, .tweet__author {
+    color: var(--heading);
+    font-weight: bold;
+}
+
+.tweet__time {
+    color: var(--text);
+    font-weight: 300;
+    padding-left: 1.5rem;
+    margin-left: 1.5rem;
+    position: relative;
+}
+
+.tweet__time::before {
+    content: "/";
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.tweet__content {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    color: var(--text);
+    font-style: italic;
+    margin: 0 auto 10rem ;
+    max-width: 104.2rem;
+}

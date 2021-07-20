@@ -1,0 +1,92 @@
+/* rest css */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* html {
+    font-size: 100%;
+} */
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    /* :root tuong duong the html */
+    --bgColor: #282a35;
+    --bgHover: #000000;
+    --bgTarget: #059862;
+    --textHover: #555555; 
+
+}
+
+/* .nav {
+    background-color: var(--bgColor);
+    margin-top: 7.4rem;
+    height: 4.9rem;
+}
+a{
+    text-decoration: none;
+    height: 1.3rem;
+}
+.nav__item {
+    display: inline-block;
+    padding-top: 1.8rem;
+    padding-bottom: 1.8rem;
+    
+}
+.nav__link {
+    font-size: 1.3rem;
+    color: white;
+    font-weight: bold;
+}
+.nav__item:hover {
+    background-color: var(--bgHover);
+    cursor: pointer;
+}
+.active {
+    background-color: #04AA6D;
+} */
+
+.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    background-color: #282a35;
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+
+.nav__link {
+    font-weight: bold;
+    display: block;
+    color: white;
+    text-align: center;
+
+    padding: 1rem;
+    text-decoration: none;
+}
+
+.nav__link:hover {
+    background-color: #111;
+}
+
+.nav__icon {
+    display: block;
+    color: white;
+    padding: 1rem;
+}
+
+.nav__icon:hover {
+    background-color: #111;
+}
+
+.a__left {
+    float: left;
+}
+.a__right {
+    float: right;
+}

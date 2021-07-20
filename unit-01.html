@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+
+<html>
+    <head>
+        <!-- dinh nghia thong tin quan trong cua website-->
+        <meta charset="utf-8">
+        <!-- Ho tro viec hien thi tot nhat cho cac ki tu khac nhau-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- Neu su dung IE thi dung M Edge-->
+        <title> Hoc frontend - HTML </title>
+        <meta name="description" content="hoc lap trinh frontend">
+        <!-- Mieu ta ngan gon ve trang web. VD: Nghe nhac mp3 mp4--> 
+        <!--SEO Web tao len tu khoa tim kiem de hien dc len top tim kiem-->
+        <meta name="keywords" content="HTML,CSS,JS" />
+        <meta name="author" content="T3H" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Responsive Ho tro viec trang web co the co dan~ tren dt man hinh-->
+        <link rel="stylesheet" href="css/style.css">
+        <!-- Nhung css tu ngoai vao HTML, la css ngoai tuyen va da phan` su dung-->
+        <style = type="text/css">
+            /* code css o day */
+            /* css noi tuyen */
+        </style>
+        <noscript>bao cho nguoi dung biet co su dung js tren trinh duyet hay khong ??? </noscript>
+    </head>
+    <body>
+        <!-- Hien thi noi dung ra ngoai trinh duyet-->
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <!-- <p style="color:red">  Hello you!</p> -->
+        <!-- css inline -->
+        <!-- HTML lam viec voi van ban, tieu de, dinh dang van ban tieu de -->
+        <h1 id="title" class="title1 title2 title3" >Tieu de</h1>
+        <!-- id: unique 
+             Class: nhieu gia tri, cho phep trung lap-->
+        <h6>Tieu de</h6>
+        <p>Day la van ban</p>
+        <h2><i>This is title</i></h2> <!-- The i/b ho tro viec seo web con the em/strong thi k-->
+        <h2><em><mark>This is title</mark></em></h2>
+        <!-- Khong nen lam dung cac the dinh dang van ban, tieu de-->
+        <!-- Vi CSS se lam thay viec nay-->
+        <!-- Van su dung boi lien quan den van de seo web-->
+
+        <!-- HTML lien ket-->
+        <a target="_blank" href="http://facebook.com" title="This is FB" >facebook.com</a>
+        <!-- NEO link/ Anchor link -->
+        <!-- Tim pham tu co thuoc tinh id co tra tri la : title-->
+        <a href="#title"> go to tag H1 </a>   
+        <p></p>
+        <a href="javascript:void(0);">Khong lam gi ca, khong link di dau</a>
+        
+        <!--HTML block : khong cho the nao dung canh vs the p, the a-->
+        <!--HTML inline: co the dung canh nhau giua cac the, vi du nhu the a-->
+        <!--HTML trong/ngoai cach nhau hon 1 cap-->
+        <!--HTML cha/con: cach nhau 1 cap'-->
+        <!--HTML lien ke: dung ngay canh nhau-->
+        <!--HTML truoc sau: cach nhau nhieu dong-->
+        <!--HTML danh sach-->
+        <!--Tao menu, sidebar, navbar-->
+        <ul>
+            <li><a href="#"> Home </a></li>
+            <li><a href="#"> About </a></li>
+            <li><a href="#"> Contact </a></li>
+            <li><a href="#"> Product </a></li>
+
+        </ul>
+        <!-- Danh sach co thu tu-->
+        <ol>
+            <li><a href="#"> Home </a></li>
+            <li><a href="#"> About </a></li>
+            <li><a href="#"> Contact </a></li>
+            <li><a href="#"> Product </a></li>
+        </ol>
+        <!-- HTML bang bieu,du lieu -->
+        <table width="100%" border="1" cellspacing="0" cellpadding="0" >
+            <thead>
+                <tr>
+                    <th> MaSV </th>
+                    <th> HoTen </th>
+                    <th> Ngay Sinh </th>
+                    <th> Que Quan </th>
+                    <th> SDT </th> 
+                    <th> Hoc Bong </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> B18DCCN220 </td>
+                    <td> Nguyen Trung Hieu </td>
+                    <td rowspan="3" > 2000 </td>
+                    <!-- Gom 3 dong lai voi nhau, nho phai xoa may dong ben duoi -->
+                    <td> Ha Noi </td>
+                    <td> 091231213 </td>
+                    <td> 1000000 </td>
+                </tr>
+                <tr>
+                    <td> B18DCCN541 </td>
+                    <td> Nguyen Manh Toan </td>
+                   <!-- <td> 2000 </td> -->
+                    <td> Ha Noi </td>
+                    <td> 09123124 </td>
+                    <td> 1 </td>
+                </tr>
+                <tr>
+                    <td> B18DCCN030 </td>
+                    <td> Nguyen Van Vit </td>
+                    <!-- <td> 2000 </td> -->
+                    <td> Ha Noi </td>
+                    <td> 091231255 </td>
+                    <td> 5 </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="5" > Tong tien hoc bong </td>
+                    <td>1000006</td>
+                </tr>
+            </tfoot>
+        </table>
+        <!-- Thuc hanh table -->
+
+        <p></p>
+        <table width="100%" border="1" cellspacing="0" cellpadding="0" > 
+            <thead>
+                <tr>
+                    <th> Thời gian </th>
+                    <th colspan="3" > Trận đấu </th>
+                    <th> Trực tiếp </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="5"> Copa America 2021 - Bán kết 1 </td>
+                </tr>
+                <tr>
+                    <td> 06/07 06:00 </td>
+                    <td> Peru </td>
+                    <td>  </td>
+                    <td> Brazil </td>
+                    <td> BĐTV, OnSport, HTVTT </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- HTML Media / Multimedia -->
+        <!-- png, jpg, jpeg, gif, svg...-->
+        <img src="images/john wick.jpg" width="300" height="300" alt="John van Wick" />
+        <br/><br/>
+        <!-- HTML audio -->
+        <audio src="media/Luv.mp3" controls loop buffer>  </audio>
+        <br/><br/>
+        <!-- HTML video -->
+        <video src="media/VID_45240717_154801_225.mp4" controls loop buffer width="300" height="300" ></video>
+        <!-- HTML Youtube -->
+        <iframe width="300" height="300" src="https://www.youtube.com/embed/LpsGDVDqyfM" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+        encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+        <br/><br/>
+        <!-- HTML Form -->
+        <form action="sever/test.jsp" method="POST" enctype="multipart/form-data">
+            <!-- Gui du lieu tu form len sever -->
+            <!-- action la duong dan~, enctype la dinh kem -->
+            <label> Username </label>
+            <input type="text" value="" placeholder="nhap username" required />
+            <br/><br/>
+            <label> Password </label>
+            <input type="password" value="" placeholder="nhap mat khau" minlength="8" maxlength="16"/>
+            <br/><br/>
+            <label> Number </label>
+            <input type="number" value="" placeholder="nhap so"/>
+            <br/><br/>
+            <label> Email </label>
+            <input type="email" value="" placeholder="nhap email" readonly />
+            <!-- read only thi van gui data input di duoc -->
+            <br/><br/>
+            <label> URL </label>
+            <input type="url" value="" placeholder="nhap url" disabled />
+            <!-- Disable khong gui len duoc -->
+            <br/><br/>
+            <label> Date </label>
+            <input type="month" value="" placeholder="nhap date">
+            <br/><br/>
+            <label> Color </label>
+            <input type="color" value="" placeholder="nhap mau">
+            <br/><br/>
+            <label> Chon nam sinh </label>
+            <select>
+                <option value="1998"> 1998 </option>
+                <option value="1998"> 1999 </option>
+                <option value="1998"> 2000 </option>
+                <option value="1998" selected="selected"> 2001 </option>
+            </select>
+            <br/><br/>
+            <label> Nam </label>
+            <input type="radio" name="gender" checked="checked" />
+            <label> Nu </label>
+            <input type="radio" name="gender"/>
+            <label> Khong xac dinh </label>
+            <input type="radio" name="gender"/>
+            <br/><br/>
+            <label> Ban co dong y voi cac dieu khoan cua chung toi ? </label>
+            <input type="checkbox" checked="checked" >
+            <br/><br/>
+            <label>Ghi chu</label>
+            <!-- Cho phep nguoi dung nhao du lieu tren nhieu dong-->
+            <textarea cols="50" rows="6"></textarea>
+            <button type="button"> Clickme</button>
+            <button type="submit" > Submit Form </button>
+
+        </form>
+        <script src="" async defer></script>
+        <!-- neu dat cai link css o day thi hien thi se xau-->
+    </body>
+</html>

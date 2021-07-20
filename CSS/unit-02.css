@@ -1,0 +1,105 @@
+
+*, *::after, *::before {
+    margin:0;
+    padding:0;
+}
+.box {
+    width: 300px;
+    height: 300px;
+    display: inline-block;
+}
+.box__chil1{
+    border: 1px solid red;
+    /* margin-bottom: 20px; */
+}
+.box__chil2{
+    border: 1px solid blue;
+    /* margin-top: 20px; */
+}
+p.title{
+    /* margin-top: 20px;
+    margin-left: 20px; */
+    /* border: 1px dotted black; */
+    /* padding-top: 20px;
+    padding-left: 20px; */
+    /* padding: 20px 0px 0px 20px; */ 
+            /*  T    R   B   L */
+    /* Ban chat la khac nhau */
+    /* padding: 10px 10px; */
+    /* Lay doi xung B=10 L=10 */
+    
+    /* padding-top: 10px; */
+    /* Neu chi yeu cau cach le tren 10 px */
+    /* padding: 10px 0px 0px 0px */
+    /* Neu yeu cau cach le tren 10px va cac le con lai k cach gi */
+}
+/* div.parent a{
+    display: block;
+} */
+
+/* body {
+   padding-bottom: 400px; 
+} */
+
+div.container{
+    /* Dan tat ca cac thanh phan ben trong */
+    display:flex;
+    padding-top: 100px;
+}
+section.content {
+    width: 980px;
+    min-height: 300px;
+    background-color: black;
+
+}
+section.content div.child {
+    width: 30%;
+    height: 300px;
+    float: left
+}
+section.content div.child-1 {
+    background-color: burlywood;
+
+}
+section.content div.child-2{
+    background-color: orange;
+}
+section.content div.child-3{
+    background-color: green;
+}
+article.site {
+    width: 300px;
+    height: 300px;
+    background-color: violet;
+}
+.clear {
+    clear:both;
+}
+
+div.position {
+    width: 350px;
+    height: 350px;
+    border: 1px dashed red;
+    position: relative;
+    z-index: 9999;
+    background-color: pink;
+}
+
+div.position img {
+    /* position: relative; */
+    /* Di chuyen tuong doi tu do, khong quan tam den
+    thanh phan dang bao dong no */
+    position: absolute;
+    top: -300px;
+    /* su dung cac thuoc tinh : top-left-right-bottom 
+    de di chuyen */
+}
+nav.nav {
+    width: 100px;
+    height: 40px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    z-index: 0;
+}
+

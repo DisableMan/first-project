@@ -1,0 +1,248 @@
+/* nhung css */
+@import 'style.css';
+/* @import 'rs.css'; */
+html{
+    font-size: 100%;
+    1 rem = 10px;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+/* selector: cach tim ra phan tu HTML */
+/* thuoc tinh + value: dinh dang lai phan HTML */
+/* h1.title : selector */
+/* color: yellow: dinh dang phan tu */ 
+
+/* chia lam 2 module hoc css */
+/* module 1: tim hieu ve selector css */
+/* module 2: tim hieu ve thuoc tinh + gia tri cua css */
+/* Co nhung loai selector nao */
+/* Co cac loai selector co ban */
+/* p : dung cac the HTML de lam bo chon */
+/* .myclass la dung gia tri thuoc tinh class trong the HTML */
+/* # id selector dung gia tri thuoc tinh id trong the HTML */
+/* (*) dung tat ca */
+
+/* id selector */
+/* #title {
+    color: blue;
+} */
+
+/* Class selector */
+.title{
+    color: yellow;
+}
+
+
+/* HTML selector */
+/* h1 {
+    color: blue;
+} */
+/* seletor ket hop */
+h1.title {
+    color: red;
+}
+/* Do uu tien cua selector css */
+/* Vi sao do uu tien lai chon class ? */
+/* nguyen tac : selector con duong tim ra html 
+con duong cang day du ro rang - ngan gon
+cang duoc uu tien */
+/* lien quan den pham vi tim kiem cua selector
+- pham vi cang nho cang uu tien */
+
+/* Attribute selector */
+/* Có thể lợi dụng thuộc tính của thẻ để làm selector */
+input[type='text']{
+    border: 2px solid red;
+}
+/* ~ là tồn tại 1 trong nhiều giá trị của thuộc tính */
+input[class~='user']{
+    border: 1px solid blue;
+}
+/* Tồn tại ký tự trong giá trị của thuộc tính */
+input[class*='put']{
+    border: 1px solid gray;
+}
+/* Tìm kiếm kí tự kết thúc trong giá trị của thuộc tính */
+/* a[href$='vn']{
+    color: cyan;
+} */
+/* Tìm kiếm kĩ tự bắt đầu trong giá trị của thuộc tính */
+/* a[href^='https']{
+    color: darkgreen;
+} */
+/* Đứng đằng sau giá trị của thuộc tính phải là kí tự - , sau kí
+tự - thì không cần quan tâm. Giá trị này phải là giá trị bắt đầu
+của thuộc tính, trái sang phải */
+input[class|='form']{
+    border: 1px dotted red
+}
+/* Giữa các loại attribute selector không có sự ưu tiên  */
+/* Thành phần viết cuối cùng của selector sẽ bị tác động,
+những thành phần đứng trước chỉ là thành phần bổ trợ cho
+seletor */
+div.main_left + div.main_right{
+    width: 200px;
+    height: 200px;
+    border: 1px dotted red;
+}
+/* main > div.main_left > article.main_article > p {
+    color: red;
+} */
+/* Dùng khoảng trắng cũng được */
+
+/* main  div.main_left  article.main_article  p {
+    color: red;
+} */
+
+/* main > div.main_left > p {
+    color: red;
+} */
+
+/* Đây thì đổi màu được */
+/* main  div.main_left  p {
+    color: red;
+} */
+/* Gom nhom cac selector khi chung thuoc tinh va gia tri */
+p.title, p.title1, p.title2 {
+    color: salmon;
+}
+
+p.title {
+    font-size: 14px;
+}
+
+p.title1 {
+    font-size: 16px;
+}
+
+p.title2 {
+    font-size: 18px;
+}
+
+/* Nhin vao selector phan cap, dung lai cau truc html */
+
+section.content > div.navbar + div.sidebar > nav.menu ul.list li.list__item a {
+    color: red;
+}
+
+/* pesudo class selector */
+/* Tim thang con dau tien */
+div.content :first-child {
+    /* H2-01 vi dung dau tien trong content*/
+    color: pink;
+}
+div.content :last-child{
+    /* h4-01 vi dung cuoi cung*/
+    color: blue;
+}
+/* Tất cả các loại con đầu tiên của các loại thẻ - từ trên xuống*/
+div.content :first-of-type{
+    color: red;
+}
+/* Tất cả các loại con cuối cùng của các loại thẻ - từ trên xuống*/
+div.content :last-of-type{
+    color:green;
+}
+
+
+
+div.content :nth-child(3){
+    color: orange;
+}
+
+div.content :nth-of-type(3){
+    color: violet;
+}
+/* Thành phần con từ vị trí cuối cùng đi lên */
+div.content :nth-last-child(2){
+    color: brown;
+}
+/* Xác định những thằng con cuối cùng - đếm ngược lên tìm ra vị trí */
+/* 
+h2 02
+h3 02
+p 02 
+*/
+div.content :nth-last-of-type(2){
+    color: blueviolet;
+}
+
+/* div.content: first-child nhớ dấu cách là trỏ đến các thành phần con */
+div.content:first-child {
+    color: yellow;
+    /* width: 300px;
+    height: 300px;
+    border-top: 1px solid: red; */
+}
+/* Trong thanh phan chi chua 1 thang con */
+div.parent :only-child {
+    color: blue;
+}
+input[class|='check']:focus{
+    width: 30rem;
+    height: 30rem;
+    outline: none; /* để giữ nguyên trạng thái khung cũ*/
+}
+
+input[type="checkbox"]:checked{
+    width: 100px;
+    height: 100px;
+}
+
+a.link:active {
+    color: red;
+}
+
+a.link:visited {
+    color:violet
+}
+
+a.link:hover {
+    color: pink;
+}
+/* Chữ cái đầu tiên */
+div.element p.content::first-letter {
+    color: red;
+    font-size: 50px;
+}
+/* Dòng đầu tiên */
+div.element p.content::first-line{
+    color: blue;
+}
+/* Thêm 1 vào trước */
+/* div.element p.content::before {
+    content: 'Hoc CSS'
+} */
+/* Thêm 1 vào sau */
+/* div.element p.content::after {
+    content: url('../images/john wick.jpg');
+} */
+/* Bôi đen */
+div.element p.content::selection {
+    color: pink
+}
+
+/* 
+rem: the html
+em: khi tao cho cai thanh phan ben trong
+mac dinh co chu 16px tren trinh duyet <=> 100%
+*/
+
+/* p.content{
+    border: thick dashed green;
+} */
+
+div.element{
+    margin: 15px;
+    padding: 20px;
+    width: 35%;
+    border: thin solid green;
+    border-width: 10px;
+    outline-style: dashed;
+    outline-color: tan;
+    outline-width: 0.5rem;
+    border-bottom-style: groove  ; 
+    border-bottom-color: red;  
+}
+

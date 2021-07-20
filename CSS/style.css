@@ -1,0 +1,9 @@
+/* code css o day thi file unit-01.css 
+se nhan duoc cac doan code o day */
+*, *::after, *::before {
+    /* reset CSS - reset brower */
+    /* boi vi de tat ca cac trinh duyet 
+    se reset ve giong nhau */
+    margin: 0;
+    padding:  0;
+}
